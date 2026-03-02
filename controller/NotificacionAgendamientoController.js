@@ -33,7 +33,7 @@ export default class NotificacionAgendamientoController {
         <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Confirmar Cita - Silueta Chic</title>
+          <title>Confirmar Cita</title>
           <style>
             body {
               font-family: Arial, sans-serif;
@@ -190,7 +190,7 @@ export default class NotificacionAgendamientoController {
                 <p>Tu cita para el <strong>${fechaInicio}</strong> a las <strong>${horaInicio}</strong> ha sido confirmada exitosamente.</p>
                 <p>Hemos notificado a nuestro equipo de tu confirmación.</p>
                 <p style="margin-top: 30px; color: #6b7280; font-size: 14px;">
-                  Nos vemos pronto en Silueta Chic 💜
+                  Puedes cerrar esta ventana.
                 </p>
               </div>
             </body>
@@ -205,7 +205,7 @@ export default class NotificacionAgendamientoController {
             <head>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Error - Silueta Chic</title>
+              <title>Error</title>
               <style>
                 body {
                   font-family: Arial, sans-serif;
@@ -291,7 +291,7 @@ export default class NotificacionAgendamientoController {
         <head>
           <meta charset="UTF-8">
           <meta name="viewport" content="width=device-width, initial-scale=1.0">
-          <title>Cancelar Cita - Silueta Chic</title>
+          <title>Cancelar Cita</title>
           <style>
             body {
               font-family: Arial, sans-serif;
@@ -461,7 +461,7 @@ export default class NotificacionAgendamientoController {
                 <p>Tu cita para el <strong>${fechaInicio}</strong> a las <strong>${horaInicio}</strong> ha sido cancelada.</p>
                 <p>Hemos notificado a nuestro equipo de tu cancelación.</p>
                 <p style="margin-top: 30px; color: #6b7280; font-size: 14px;">
-                  Esperamos verte pronto en Silueta Chic 💜
+                  Puedes cerrar esta ventana.
                 </p>
               </div>
             </body>
@@ -476,7 +476,7 @@ export default class NotificacionAgendamientoController {
             <head>
               <meta charset="UTF-8">
               <meta name="viewport" content="width=device-width, initial-scale=1.0">
-              <title>Error - Silueta Chic</title>
+              <title>Error</title>
               <style>
                 body {
                   font-family: Arial, sans-serif;
