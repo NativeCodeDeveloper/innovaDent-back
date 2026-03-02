@@ -308,7 +308,36 @@ export default class ReservaPacienteController {
 
                 if (resultadoQuery.affectedRows > 0) {
                     // Enviar correo de confirmación (no bloquear la respuesta si falla)
+                    if (email && email !== "-") {
+                        try {
+                            await NotificacionAgendamiento.enviarCorreoConfirmacionReserva({
+                                to: email,
+                                nombrePaciente,
+                                apellidoPaciente,
+                                rut,
+                                telefono,
+                                fechaInicio,
+                                horaInicio,
+                                fechaFinalizacion,
+                                horaFinalizacion,
+                                estadoReserva,
+                                id_reserva: resultadoQuery.insertId
+                            });
+                        } catch (err) {
+                            console.error("[MAIL] Error:", err.message);
+                        }
 
+                        NotificacionAgendamiento.enviarCorreoConfirmacionEquipo({
+                            nombrePaciente,
+                            apellidoPaciente,
+                            fechaInicio,
+                            horaInicio,
+                            accion: "AGENDADA",
+                            id_reserva: resultadoQuery.insertId
+                        }).catch(err => {
+                            console.error("[MAIL EQUIPO] Error:", err.message);
+                        });
+                    }
 
                     return res.status(200).send({message: true})
                 } else {
