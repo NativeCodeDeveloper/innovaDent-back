@@ -25,6 +25,7 @@ import serviciosProfesionalesRoutes from "./view/serviciosProfesionalesRoutes.js
 import tarifasProfesionalRoutes from "./view/tarifasProfesionalRoutes.js";
 import odontogramaRoutes from "./view/odontogramaRoutes.js";
 import { ejecutarRecordatoriosAutomaticos } from "./services/notificacionPreviaDia.js";
+import publicacionesTtiloDescripcionRoutes from "./view/publicacionesTtiloDescripcionRoutes.js";
 
 
 const app = express();
@@ -63,6 +64,7 @@ app.use("/textos", textosRoutes);
 app.use("/categorias", categoriaRoutes);
 app.use("/subcategorias", subCategoriasRoutes);
 app.use("/publicaciones", publicacionesRoutes);
+app.use("/publicacionesTituloDetalle", publicacionesTtiloDescripcionRoutes);
 app.use('/contacto', contactoRouter );
 app.use('/notificacion', notificacionAgendamientoRoutes);
 
